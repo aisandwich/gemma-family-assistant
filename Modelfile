@@ -1,0 +1,11 @@
+FROM gemma2:2b
+
+ADAPTER gemma-qa-finetuned
+
+PARAMETER temperature 0.7
+PARAMETER stop "<end_of_turn>"
+
+TEMPLATE """<start_of_turn>user
+{{ .Prompt }}<end_of_turn>
+<start_of_turn>model
+"""

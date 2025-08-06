@@ -1,0 +1,98 @@
+Problem → Solution → Impact (Ajay’s Family Story with Numbers)
+
+1. Ajay(Son) – The Student Without a Tutor
+	•	Problem: In rural India, 32.5% of Class VIII students cannot read a Class II‑level text, and 1 in 5 rural children in grades 1‑8 depend on costly private tuition — a barrier for poor families.
+	•	Solution: Gemma 3n‑powered offline tutor fine‑tuned on Ajay’s syllabus, guiding him in all subjects step‑by‑step.
+	•	Impact: Affordable, private learning support at home, bridging the education gap for children like Ajay.
+
+⸻
+
+2. Sita(Ajay mom) – The Homemaker Who Wants Natural Remedies
+	•	Problem: Up to 70% of rural households rely on traditional medicine, but much of it is based on unverified sources, risking harm.
+	•	Solution: Gemma 3n fine‑tuned on verified Ayurvedic datasets, delivering accurate, safe remedies in local languages.
+	•	Impact: Immediate, reliable home health guidance without costly or delayed clinic visits.
+
+⸻
+
+3. Jaya(Ajay's sister) – The Young Girl with Depression
+	•	Problem: Depression affects 14.49% of rural residents, almost double the urban rate, yet only 20% of Indians with mental illness receive treatment.
+	•	Solution: Gemma 3n mental health companion trained on approved depression‑care material, accessible offline for private support.
+	•	Impact: Early access to emotional support, reducing stigma and preventing condition escalation.
+
+⸻
+
+4. Surya(Ajay's father) – The Rice Farmer Fighting Crop Loss
+	•	Problem: Rice diseases like bacterial blight can destroy up to 60% of yields, and pests/diseases account for 40% of crop losses globally every year.
+	•	Solution: Gemma 3n fine‑tuned on agricultural advisory data, identifying risks from farmer‑described symptoms or photos.
+	•	Impact: Timely intervention to save crops, protecting income and food supply.
+
+⸻
+
+5. Rao(Ajay's Grandfather) – The Grandfather Who Has Lost His Sight
+	•	Problem: 33.8% of Indians aged 45+ have distance vision impairment or blindness; 76.3% have near vision loss, and most cases are avoidable.
+	•	Solution: Gemma 3n multimodal model describing images Rao captures, from reading signs to identifying objects.
+	•	Impact: Restores independence, helping Rao navigate daily life confidently.
+
+⸻
+
+6. When Disaster Strikes – Floods in Their Village
+	•	Problem: Floods cause 75% of extreme weather deaths in India, killing an average of 1,671 people annually and causing ₹25,000+ crore in yearly losses.
+	•	Solution: Gemma 3n fine‑tuned on disaster‑management guides, providing offline survival instructions when networks fail.
+	•	Impact: Life‑saving local guidance during emergencies, reducing panic and risk.
+
+⸻
+
+💡 Why This Matters:
+One fine‑tuned AI model can cover six urgent rural challenges — education, healthcare, mental health, agriculture, accessibility, and disaster safety — all offline and in local languages. Ajay’s family is just one example among millions in rural India.
+
+
+
+Reference:
+1. https://forumias.com/blog/annual-status-of-education-report-aser-2024-explained-pointwise/
+2. https://www.orfonline.org/expert-speak/nep-2020-advancing-equity-through-foundational-learning
+3. https://timesofindia.indiatimes.com/india/india-still-grapples-with-gap-with-schooling-and-learning-unesco-report/articleshow/121632745.cms
+4. chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ijrar.org/papers/IJRAR19D5293.pdf
+5. chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.isid.ac.in/~epu/acegd2014/papers/AmbrishDongre.pdf
+6. https://www.povertyactionlab.org/evaluation/impact-private-tutoring-prices-student-attendance-and-performance-india
+7. https://www.researchgate.net/publication/386537102_Decomposing_rural-urban_differences_in_depression_prevalence_a_cross-sectional_analysis_of_two_community-based_southern_Indian_cohorts
+8. https://pmc.ncbi.nlm.nih.gov/articles/PMC10765017/
+9. https://www.psychologs.com/why-mental-health-care-still-doesnt-reach-rural-minority-communities/
+10. https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2024.1433948/full
+
+1. https://farmonaut.com/blogs/bacterial-blight-disease-best-plant-blight-management-2025
+2. https://www.newswise.com/articles/how-does-rbi-contribute-to-the-precise-detection-of-rice-blast-disease
+3. https://india.dexian.com/agritech/pest-disease-control/
+4. https://www.cabi.org/what-we-do/digital-development/digital-advisory-tools/
+
+1. https://www.researchgate.net/publication/365191278_The_prevalence_of_vision_impairment_and_blindness_among_older_adults_in_India_findings_from_the_Longitudinal_Ageing_Study_in_India
+2. https://bjo.bmj.com/content/105/1/32
+3. https://pmc.ncbi.nlm.nih.gov/articles/PMC12080909/
+4. https://www.researchgate.net/publication/346761195_Impact_of_Vision_Loss_on_Visual_Function_Among_Elderly_Residents_in_the_Home_for_the_Aged_in_India_The_Hyderabad_Ocular_Morbidity_in_Elderly_Study
+5. https://www.researchgate.net/publication/387192274_Assessment_Of_Challenges_Faced_by_Caregivers_of_Older_Adults_Living_with_Visual_Impairment_in_Enugu_East_Local_Government_Area
+6. https://pmc.ncbi.nlm.nih.gov/articles/PMC5056544/
+
+1. https://www.preventionweb.net/news/floods-cyclones-caused-maximum-deaths-extreme-weather-events-past-50-years
+2. https://factly.in/data-average-annual-economic-impact-due-to-floods-is-more-than-rs-25000-crores-after-the-year-2010/
+3. https://www.indiaspend.com/explainers/why-indias-early-warning-systems-for-floods-and-cyclones-fall-short-825110
+4. https://pmc.ncbi.nlm.nih.gov/articles/PMC3483513/
+
+
+
+
+
+Architecture:
+1. Identified problem in India
+2. Collected datasets related to it. 
+	1. eight class science govt text book that is used across india by all central schools
+	2. Ayurveda home remedies
+	3. rice diseases, symptoms and management
+	4. Depression, reasons, how to handle
+	5. Govt reelased instructions for disaster management
+3. Extracted structure from the datasets using pymupdf
+4. Setup gemma 3n 4b model locally using ollama
+5. Generated 2630 Q&A from strtucuted data for all datasets/domains using ollama api gemma & python
+6. Trained gemma 3n 4b model on kaggle with 2630, finetuning
+7. Converted model to gguf format and downloaded it locally
+8. Deployed finetuned model into Ollama
+9. Built a rag on structured data using FAISS, built index and saved it locally
+10. Built a streamlit app for end users (family)

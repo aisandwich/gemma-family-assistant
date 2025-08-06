@@ -1,0 +1,42 @@
+Lets again briain storm
+
+I have gemma 3n 4b model, this can work on text, images and audio (gemma3n:e4b            15cb39fd9394    7.5 GB    5 days ago ). Route voice and images to this model.
+
+I have gemma 3n 4b fintuned model, this cannot work with images, audio, only works with text (gemma-family:latest    e978f6e2e10a    7.3 GB    16 hours ago). Model is finetuned on datasets, so this can answer questions from all the domains. Route questions to this model
+
+Now build Education tab.
+Context:
+student can ask two types of question:
+1. general
+2. Page based
+
+for example, this is a general question:
+Explain the importance of irrigation in crop production. What are different irrigation methods, and how do they impact water usage and crop yields?
+
+Page based question:
+In page 199, explain about best practices of crop production
+
+For each question:
+- For general question, get it from rag first. Append the data along with question.
+identify the page numbers and they might have images, get the images, pass one by one to Gemma and ask it to explain
+- For page based question, get it from structured json. Append the data along with question.
+identify the page numbers and they might have images, get the images, pass one by one to Gemma and ask it to explain
+
+
+Streamlit requirements:
+- student can ask a question
+- you check if it is page based or general
+- if general, do rag -> get relevant info -> if images found, send them to gemma, get what it says + send the text from Rag and ask it to explain
+- if page based -> just extract the info from page, images, send them to gemma and get explaination
+
+
+lets first build this in notebook and then we can ship it to streamlit.
+
+sample structure:
+datasets/education
+├── education_qa_dataset.json
+├── education_structured_data_extract.json
+├── images
+└── rag_index
+    ├── chunks_metadata.json
+    └── rag_config.json
