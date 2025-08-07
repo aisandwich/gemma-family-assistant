@@ -1,4 +1,8 @@
 # Ajay’s Family AI: One Offline Model Tackling Six Rural Challenges
+
+## Demo url
+https://ca37aad4b0f5.ngrok-free.app/
+
 ## 📌 Problem  
 Millions of rural Indian families face multiple daily challenges — lack of affordable tutoring, reliance on unverified health remedies, untreated mental health issues, devastating crop losses, vision impairment, and life-threatening disasters. Limited internet access and high service costs keep life-saving knowledge out of reach.  
 
